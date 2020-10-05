@@ -1,3 +1,5 @@
+![image visuel twitch](https://github.com/Sieo/Twitch-chest-auto-getter/blob/main/visuel.png)
+
 # Twitch-chess-auto-getter
 Tampermonkey script to lazily get the channel's point chest
 
