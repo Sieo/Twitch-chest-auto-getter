@@ -12,8 +12,7 @@
    'use strict';
    var number_chest_got = 0;
    var created = false;
-   function getTheChest(){
-     setTimeout(function() {
+     setInterval(function() {
          // Let's add some visual backup
          var button_number_of_points = document.getElementsByClassName('community-points-summary')[0];
          if (button_number_of_points != undefined && !created) {
@@ -36,10 +35,5 @@
              // update the number of chest got while afk
              document.getElementById('numberOfChestGot').innerText = ++number_chest_got;
          }
-         getTheChest();
      }, 60*1000);
-   };
-
-   // Call the method to begin the loop
-   getTheChest();
 })();
