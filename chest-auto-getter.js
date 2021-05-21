@@ -5,7 +5,7 @@
 // @description  Let you get the chest automatically
 // @author       Hugo Mallaroni-Cosentino
 // @include      https://www.twitch.tv/*
-// @include      https://supervisor.ext-twitch.tv/*
+// @include      https://*.ext-twitch.tv/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
@@ -19,7 +19,7 @@
         var observer = new MutationObserver(function (mutations) {
             var button_div = document.getElementsByClassName("claimable-bonus__icon")[0];
             if(button_div != undefined) {
-                var button_to_click = button_div.parentNode.parentNode;
+                var button_to_click = button_div.parentNode.parentNode.parentNode;
                 // update the number of chest got while afk
                 button_to_click.addEventListener('click', function () {
                     document.getElementById('numberOfChestGot').innerText = ++number_chest_got;
